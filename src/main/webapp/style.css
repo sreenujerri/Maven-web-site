@@ -1,0 +1,80 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background: url(bg.jpg);
+    text-align: center;
+    font-family: Arial;
+}
+
+input{
+    display: none;
+}
+
+.tag{
+    font-size: 20px;
+    margin: 1.5em 0px;
+    padding: 5px 25px;
+    border-radius: 50px;
+    display: inline-block;
+    cursor: pointer;
+    background: #efefef;
+    text-decoration: none;
+    color: black;
+    border: 1px solid #ccc;
+}
+
+img{
+    max-width: 300px;
+    width: 200px;
+    height: 200px;
+    transition: all .4s ease-in-out;
+}
+/*filter CSS */
+
+ #fish:checked ~ .images > img:not([class*='fish']),
+ #birds:checked ~ .images > img:not([class*='birds']),
+ #lion:checked ~ .images > img:not([class*='lion']),
+ #nature:checked ~ .images > img:not([class*='nature']){
+   width: 0px;
+   height: 0px;
+}
+
+#all:checked ~ .all,
+#fish:checked ~ .tag1, 
+#birds:checked ~ .tag2,
+#lion:checked ~ .tag3,
+#nature:checked ~ .tag4{
+    background-color: #333333;      
+    color: rgb(240, 21, 141);
+} 
+h2{
+    color: rgb(46, 13, 235);
+    font-size: 20px;
+    font-weight: normal;
+    margin: 40px 0;
+}
+h1{
+    color: rgb(12, 11, 11);
+    font-size: 40px;
+    font-weight: normal;
+    margin: 40px 0;
+}
+label{
+    display: inline-block;
+    height: 40%;
+    padding: 0 5px;
+    margin: 0 10px;
+    line-height: 20px;
+}
+label:hover{
+    color: aqua;
+}.images{
+    width: 40;
+    grid-template-columns: repeat(4,1fr);
+}
+
